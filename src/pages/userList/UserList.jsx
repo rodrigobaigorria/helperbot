@@ -7,21 +7,21 @@ export default function UserList() {
     const columns = [
         { field: 'id', headerName: 'ID', width: 90 },
         {
-          field: 'username',
-          headerName: 'Username',
+          field: 'usuario',
+          headerName: 'Usuario',
           width: 200,
           renderCell: (params) => {
               return (
                   <div className='userListUser'>
                       <img className='userListImg' src={params.row.avatar} />
-                      {params.row.username}
+                      {params.row.usuario}
                   </div>
               )
           },
         },
         {
-          field: 'phone',
-          headerName: 'Phone',
+          field: 'telefono',
+          headerName: 'Telefono',
           width: 150,
           editable: true,
         },
@@ -32,27 +32,27 @@ export default function UserList() {
           editable: true,
         },
         {
-            field: 'status',
-            headerName: 'Status',
+            field: 'estado',
+            headerName: 'Estado',
             width: 200,
             editable: true,
           },
       ];
       
       const rows = [
-        { id: 1, username: 'Jon Snow', avatar, phone:'1144375744', email: 'jon@gmail.com', status:'active' },
-        { id: 2, username: 'Jon Snow', avatar, phone:'1144375744', email: 'jon@gmail.com', status:'active' },
-        { id: 3, username: 'Jon Snow', avatar, phone:'1144375744', email: 'jon@gmail.com', status:'active' },
-        { id: 4, username: 'Jon Snow', avatar, phone:'1144375744', email: 'jon@gmail.com', status:'active' },
-        { id: 5, username: 'Jon Snow', avatar, phone:'1144375744', email: 'jon@gmail.com', status:'active' },
-        { id: 6, username: 'Jon Snow', avatar, phone:'1144375744', email: 'jon@gmail.com', status:'active' },
-        { id: 7, username: 'Jon Snow', avatar, phone:'1144375744', email: 'jon@gmail.com', status:'active' },
-        { id: 8, username: 'Jon Snow', avatar, phone:'1144375744', email: 'jon@gmail.com', status:'active' },
+        { id: 1, usuario: 'Jon Snow', avatar, telefono:'1144375744', email: 'jon@gmail.com', estado:'active' },
+        { id: 2, usuario: 'Jon Snow', avatar, telefono:'1144375744', email: 'jon@gmail.com', estado:'active' },
+        { id: 3, usuario: 'Jon Snow', avatar, telefono:'1144375744', email: 'jon@gmail.com', estado:'active' },
+        { id: 4, usuario: 'Jon Snow', avatar, telefono:'1144375744', email: 'jon@gmail.com', estado:'active' },
+        { id: 5, usuario: 'Jon Snow', avatar, telefono:'1144375744', email: 'jon@gmail.com', estado:'active' },
+        { id: 6, usuario: 'Jon Snow', avatar, telefono:'1144375744', email: 'jon@gmail.com', estado:'active' },
+        { id: 7, usuario: 'Jon Snow', avatar, telefono:'1144375744', email: 'jon@gmail.com', estado:'active' },
+        { id: 8, usuario: 'Jon Snow', avatar, telefono:'1144375744', email: 'jon@gmail.com', estado:'active' },
 
       ];
   return (
     <div className='userList'>
-      <div style={{ height: 400, width: '100%' }}>
+      <div style={{ height: 400, width: '80%' }}>
       <DataGrid
         rows={rows}
         columns={columns}

@@ -1,7 +1,7 @@
 import './sidebar.css';
 import { 
     LineStyle, 
-    Timeline, 
+    PeopleOutline, 
     ChatBubbleOutline, 
     BuildOutlined,
     ExitToAppOutlined
@@ -24,20 +24,20 @@ export default function Sidebar() {
                   <Link className='sidebarLink' to='/users'>
 
                   <li className="sidebarListItem">
-                      <Timeline className='sidebarIcon' />
-                      Analitycs
+                      <PeopleOutline className='sidebarIcon' />
+                      Usuarios
                   </li>
                   </Link>
                   <Link className='sidebarLink' to='/chatcenter'>
                   <li className="sidebarListItem">
                       <ChatBubbleOutline className='sidebarIcon' />
-                      Chats
+                      ChatCenter
                   </li>
                   </Link>
                   <Link className='sidebarLink' to='/build'>
                   <li className="sidebarListItem">
                       <BuildOutlined className='sidebarIcon' />
-                      Build Chatbot
+                    Chatbot
                   </li>
                   </Link>
               </ul>

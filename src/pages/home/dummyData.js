@@ -1,27 +1,27 @@
 export const userData = [
     {
-      name: 'Jan',
-      "Active User": 4000,
+      name: 'Enero',
+      "Chats recibidos": 4000,
     },
     {
-      name: 'Feb',
-      "Active User": 3000,
+      name: 'Febrero',
+      "Chats recibidos": 3000,
     },
     {
-        name: 'Mar',
-        "Active User": 4000,
+        name: 'Marzo',
+        "Chats recibidos": 4000,
       },
       {
-        name: 'Apr',
-        "Active User": 2000,
+        name: 'Abril',
+        "Chats recibidos": 2000,
       },  
       {
-        name: 'May',
-        "Active User": 3000,
+        name: 'Mayo',
+        "Chats recibidos": 3000,
       }, 
       {
-        name: 'Jun',
-        "Active User": 1000,
+        name: 'Junio',
+        "Chats recibidos": 1000,
       },
   ];
   
