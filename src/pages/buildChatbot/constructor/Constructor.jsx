@@ -1,35 +1,47 @@
 import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
-import BuildChatbot from '../BuildChatbot';
-import PhoneChatbot from '../phoneChatbot/PhoneChatbot';
+import { useDispatch } from 'react-redux';
+import { sendMessage, startBotMessage } from '../../../actions/botActions';
+import {useForm} from '../../../hooks/useForm';
 
 import './constructor.css';
 
 export default function Constructor() {
 
-
-  const handleMessage = () => {
-    console.log("hola")
+  const dispatch = useDispatch();
+  
+  const [ formValues, handleInputChange] = useForm();
+  
+  const { message } = formValues;
+  
+  const handleMessage = (e) => {
+    e.preventDefault();
+    console.log(message)
+    dispatch(sendMessage(message));
+    dispatch(startBotMessage(message));
   }
 
   return (
     <>
       <div className="buildChatbotfirst">
-        <div className="build__title">El Bot responde</div>
+        <div className="build__title">Posibles respuestas del Bot</div>
          <div className="buildContainer">
-          
+          <form onSubmit={handleMessage}>
          <div className="buildContainerCenter">
            <textarea
              className='build__textarea'
              placeholder='Respuesta del bot'
+             name='message'
+             value={message}
+             onChange={handleInputChange}
            >
 
            </textarea>
          </div> 
          <div className="buildContainerEnd">
-           <Button className='btn-outline' onClick={()=>{PhoneChatbot({message:'hola a todos!!'})}}>Cancelar</Button>
-           <Button className='btn-primary' onClick={()=>{PhoneChatbot({message:'hola a todos!!'})}}>Guardar</Button>
+           <Button className='btn-outline' >Cancelar</Button>
+           <Button type='submit' className='btn-primary'>Guardar</Button>
          </div>
+         </form>
          </div>
       </div>
     </>

@@ -1,17 +1,10 @@
 
-import { useState } from 'react';
 import './buildChatbot.css';
 import Constructor from './constructor/Constructor';
 import Intents from './intents/Intents';
 import PhoneChatbot from './phoneChatbot/PhoneChatbot';
 
-export default function BuildChatbot({message}) {
-
-  const [msg, setMsg] = useState('');
-
-  if(message){
-    setMsg(message);
-  }
+export default function BuildChatbot() {
 
   return (
     <div className='buildChatbotContainer'>
@@ -21,7 +14,7 @@ export default function BuildChatbot({message}) {
     <br />
     <div className='buildChatbot'>
       <Constructor/>
-      <PhoneChatbot message={msg}/>
+      <PhoneChatbot/>
       <Intents />
     </div>
     </div>  

@@ -1,3 +1,5 @@
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
 import './App.css';
@@ -10,7 +12,7 @@ import ChatCenter from "./pages/chatCenter/ChatCenter";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Topbar />
       <div className="container">
         <Sidebar />
@@ -22,7 +24,7 @@ function App() {
 
     </Routes>
       </div>
-    </>
+    </Provider>
   );
 }
 

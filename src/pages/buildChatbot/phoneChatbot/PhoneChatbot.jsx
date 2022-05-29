@@ -1,19 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import './phoneChatbot.css';
 
-export default function PhoneChatbot({message}) {
+export default function PhoneChatbot() {
 
-  const [msg, setMsg] = useState();
+  const [msg, setMsg] = useState([]);
 
-  if(message.length > 0){
-    setMsg(message);
-  }
+  const state = useSelector( state => state );
+
+  console.log(state);
+
+  useEffect(() => {
+    console.log(msg);
+    setMsg( state.botIn.msg );
+  }, [state])
   
   return (
     <div>
       <div className="buildChatbotPhone">
          <div className={msg ? "buildChatbotPhoneMessage" : ""}>
-           {msg}
+           #{msg}
          </div>
       </div>
     </div>
