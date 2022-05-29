@@ -1,6 +1,6 @@
 import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
-import './app.css';
+import './App.css';
 import Home from "./pages/home/Home";
 import UserList from "./pages/userList/UserList";
 import { Routes, Route } from "react-router-dom";
@@ -15,9 +15,9 @@ function App() {
       <div className="container">
         <Sidebar />
     <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<BuildChatbot />} />
         <Route path='/users' element={<UserList />} />
-        <Route path='/build' element={<BuildChatbot />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/chatcenter' element={<ChatCenter />} />
 
     </Routes>

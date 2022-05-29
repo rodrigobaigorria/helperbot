@@ -15,21 +15,20 @@ export default function Constructor() {
   return (
     <>
       <div className="buildChatbotfirst">
+        <div className="build__title">El Bot responde</div>
          <div className="buildContainer">
-           <div className="buildButtons">
-
-         <ButtonGroup className='buildButtons' variant="text" color="primary" aria-label="outlined primary button group">
-           
-        <Button>Texto</Button>
-        <Button>Boton</Button>
-        <Button>Imagen</Button>
-      </ButtonGroup>
-           </div>
+          
          <div className="buildContainerCenter">
-         
+           <textarea
+             className='build__textarea'
+             placeholder='Respuesta del bot'
+           >
+
+           </textarea>
          </div> 
          <div className="buildContainerEnd">
-           <Button variant="contained" color="primary" onClick={()=>{PhoneChatbot({message:'hola a todos!!'})}}>Enviar</Button>
+           <Button className='btn-outline' onClick={()=>{PhoneChatbot({message:'hola a todos!!'})}}>Cancelar</Button>
+           <Button className='btn-primary' onClick={()=>{PhoneChatbot({message:'hola a todos!!'})}}>Guardar</Button>
          </div>
          </div>
       </div>

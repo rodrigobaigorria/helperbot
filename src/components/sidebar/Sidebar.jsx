@@ -15,7 +15,7 @@ export default function Sidebar() {
           <div className="sidebarMenu">
               <h3 className="sidebarTitle">Dashboard</h3>
               <ul className="sidebarList">
-                  <Link className='sidebarLink' to='/'>
+                  <Link className='sidebarLink' to='/home'>
                   <li className="sidebarListItem active">
                       <LineStyle className='sidebarIcon' />
                       Home
@@ -34,7 +34,7 @@ export default function Sidebar() {
                       ChatCenter
                   </li>
                   </Link>
-                  <Link className='sidebarLink' to='/build'>
+                  <Link className='sidebarLink' to='/'>
                   <li className="sidebarListItem">
                       <BuildOutlined className='sidebarIcon' />
                     Chatbot
